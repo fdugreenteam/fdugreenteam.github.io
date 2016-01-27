@@ -11,7 +11,7 @@
           </div>
         </li>
         <li>
-          <img src="earthday.jpeg">
+          <img src="images/earthday.jpeg">
           <div class="caption left-align">
             <h3>Earth Day Spring 2015</h3>
             <h5 class="light grey-text text-lighten-3">Celebrating our earth for the 7th year</h5>
