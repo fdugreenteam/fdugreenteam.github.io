@@ -17,12 +17,12 @@
         <a href="#" data-activates="side-nav" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li><a href="index.php">Home</a></li>
-          <li><a href="events.php">Events</a></li>
+          <li><a href="calendar.php">Events</a></li>
           <li><a href="register.php">Register</a></li>
         </ul>
         <ul id="side-nav" class="side-nav">
           <li><a href="index.php">Home</a></li>
-          <li><a href="events.php">Events</a></li>
+          <li><a href="calendar.php">Calendar</a></li>
           <li><a href="register.php">Register</a></li>
         </ul>
       </div>
