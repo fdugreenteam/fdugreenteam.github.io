@@ -13,7 +13,7 @@
   <header>
     <nav>
       <div class="nav-wrapper green">
-        <a href="index.php" class="brand-logo center">Green Team Testing</a>
+        <a href="index.php" class="brand-logo center">Green Team</a>
         <a href="#" data-activates="side-nav" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li><a href="index.php">Home</a></li>
