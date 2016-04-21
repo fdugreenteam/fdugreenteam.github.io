@@ -30,11 +30,14 @@
       <div class="col s12 m6 l4">
       <div class="card">
         <div class="card-image">
-          <img src="images/earth_day.jpg">
+          <img src="images/posters/2016/earth_day.jpg">
           <span class="card-title">Earth Day Poster Competition 2016</span>
         </div>
         <div class="card-content">
           <p>Check out all of our poster entries and the winning posters!</p>
+        </div>
+        <div class="card-action">
+          <a href="posters.php">View Posters</a>
         </div>
       </div>
     </div>
