@@ -1,0 +1,22 @@
+@import 'node_modules/materialize-css/sass/components/color-variables';
+@import 'node_modules/materialize-css/sass/components/color-classes';
+$primary-color: color("green", "base") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+$secondary-color: color("green", "lighten-1") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-green", "darken-1") !default;
+@import 'node_modules/materialize-css/sass/materialize';
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main, #sapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}

@@ -3,9 +3,11 @@ import replace from 'rollup-plugin-replace';
 import commonjs from 'rollup-plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
 import babel from 'rollup-plugin-babel';
+import scss from 'rollup-plugin-scss';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+import { scss as svelte_scss } from '@kazzkiq/svelte-preprocess-scss';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -20,10 +22,18 @@ export default {
 				'process.browser': true,
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
+			scss({
+				output: 'static/global.css',
+			}),
 			svelte({
 				dev,
 				hydratable: true,
-				emitCss: true
+				emitCss: true,
+				preprocess: {
+					style: svelte_scss({
+						includeDirectories: ['src', 'node_modules'],
+					})
+				},
 			}),
 			resolve(),
 			commonjs(),
@@ -59,9 +69,17 @@ export default {
 				'process.browser': false,
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
+			scss({
+				output: 'static/global.css',
+			}),
 			svelte({
 				generate: 'ssr',
-				dev
+				dev,
+				preprocess: {
+					style: svelte_scss({
+						includeDirectories: ['src', 'node_modules'],
+					})
+				},
 			}),
 			resolve(),
 			commonjs()
