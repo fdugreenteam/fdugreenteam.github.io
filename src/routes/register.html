@@ -1,31 +1,31 @@
 <div class="container">
   <h1>Register</h1>
   <div class="row" id="register_form">
-    <form class="col s12">
+    <form class="col s12" on:submit="create_email()">
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">perm_identity</i>
-          <input id="full_name" type="text" class="validate">
-          <label for="full_name">Full Name</label>
+          <label>Full Name</label>
+          <input id="full_name" type="text" class="validate" bind:value=full_name>
         </div>
         <div class="input-field col s12">
           <i class="material-icons prefix">dialpad</i>
-          <input id="student_id" type="number" class="validate">
-          <label for="student_id">Student ID</label>
+          <input id="student_id" type="number" class="validate" bind:value=student_id>
+          <label>Student ID</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s8">
           <i class="material-icons prefix">email</i>
-          <input id="email" type="text" class="validate">
-          <label for="email">FDU Email</label>
+          <input id="email" type="text" class="validate" bind:value=email>
+          <label>FDU Email</label>
         </div>
         <div class="input-field col s4">
-          <select id="domain">
-            <option value="1">@student.fdu.edu</option>
-            <option value="2">@fdu.edu</option>
+          <select id="email_domain" bind:value=email_domain>
+            <option value="@student.fdu.edu">@student.fdu.edu</option>
+            <option value="@fdu.edu">@fdu.edu</option>
           </select>
-          <label for="domain">Domain</label>
+          <label>Domain</label>
         </div>
       </div>
       <div class="row">
@@ -34,32 +34,57 @@
           <label>Expected Graduation</label>
         </div>
         <div class="input-field col s6">
-          <select id="semester">
-            <option value="1">Fall</option>
-            <option value="2">Spring</option>
-            <option value="3">Winter</option>
-            <option value="4">Summer</option>
-            <option value="5">Unknown</option>
+          <select id="graduation_semester" bind:value=graduation_semester>
+            <option value="Fall">Fall</option>
+            <option value="Spring">Spring</option>
+            <option value="Winter">Winter</option>
+            <option value="Summer">Summer</option>
+            <option value="">Unknown</option>
           </select>
-          <label for="semester">Semester</label>
+          <label>Semester</label>
         </div>
         <div class="input-field col s6">
-          <input id="graduation" type="number">
-          <label for="graduation">Year</label>
+          <input id="graduation_year" type="number" class="validate" bind:value=graduation_year>
+          <label>Year</label>
         </div>
       </div>
       <div class="row">
         <div class="col s12">
-          <p id="result"></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12">
-          <button class="btn" type="submit" name="action">Submit
-            <i class="material-icons">send</i>
+          <button class="btn-large" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
           </button>
         </div>
       </div>
     </form>
   </div>
 </div>
+
+<script>
+	export default {
+		async oncreate() {
+			const M = await import('materialize-css')
+			M.default.AutoInit()
+		},
+    methods: {
+      create_email() {
+        const { full_name, student_id, email, email_domain, graduation_semester, graduation_year } = this.get()
+        window.open(
+          `mailto:greenteamfdu@gmail.com?subject=Green Team Registration&body=`
+          + `Full Name: ${full_name || ''}\n`
+          + `Student ID: ${student_id || ''}\n`
+          + `Email: ${email || ''}${email_domain || ''}\n`
+          + `Graduation: ${graduation_semester || ''} ${graduation_year || ''}\n`,
+          '_blank'
+        )
+      }
+    },
+    data: () => ({
+      full_name: '',
+      student_id: undefined,
+      email: '',
+      email_domain: undefined,
+      graduation_semester: undefined,
+      graduation_year: undefined,
+    })
+	};
+</script>
