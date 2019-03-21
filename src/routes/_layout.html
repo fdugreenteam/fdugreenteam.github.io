@@ -1,24 +1,32 @@
-<Nav segment={child.segment}/>
+<Header segment={child.segment} />
 
 <main>
 	<svelte:component this={child.component} {...child.props}/>
 </main>
 
+<Footer segment={child.segment} />
+
 <style>
+	body {
+		display: flex;
+		min-height: 100vh;
+		flex-direction: column;
+	}
+
 	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
+		flex: 1 0 auto;
+	}
+
+	.outline {
+		text-shadow: 1px 1px #000;
 	}
 </style>
 
 <script>
 	export default {
 		components: {
-			Nav: '../components/Nav.html'
+			Header: '../components/Header.html',
+			Footer: '../components/Footer.html',
 		}
 	};
 </script>
