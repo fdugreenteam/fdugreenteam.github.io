@@ -1,7 +1,17 @@
 {
-  "name": "TODO",
-  "description": "TODO",
-  "version": "0.0.1",
+  "name": "fdugreenteam.github.io",
+  "description": "FDU Green Team Webpage",
+  "author": "Daniel J. B. Clarke <u8sand@gmail.com>",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fdugreenteam/fdugreenteam.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fdugreenteam/fdugreenteam.github.io/issues"
+  },
+  "homepage": "https://github.com/fdugreenteam/fdugreenteam.github.io#readme",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
