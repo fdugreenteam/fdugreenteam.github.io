@@ -2,7 +2,7 @@
   <nav>
     <div class="nav-wrapper green">
       <a href="/" class="brand-logo center">Green Team</a>
-      <a href="#" target="sidenav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a href="javascript:void(0)" data-target="sidenav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="left hide-on-med-and-down">
         <Nav />
       </ul>
@@ -15,6 +15,10 @@
 
 <script>
 export default {
+  async oncreate() {
+    const M = await import('materialize-css')
+    M.default.Sidenav.init(document.querySelectorAll('.sidenav'))
+  },
   components: {
     Nav: './Nav.html'
   }
