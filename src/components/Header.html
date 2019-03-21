@@ -1,0 +1,22 @@
+<header>
+  <nav>
+    <div class="nav-wrapper green">
+      <a href="/" class="brand-logo center">Green Team</a>
+      <a href="#" target="sidenav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="left hide-on-med-and-down">
+        <Nav />
+      </ul>
+    </div>
+    <ul id="sidenav" class="sidenav">
+      <Nav />    
+    </ul>
+  </nav>
+</header>
+
+<script>
+export default {
+  components: {
+    Nav: './Nav.html'
+  }
+}
+</script>
