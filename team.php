@@ -6,7 +6,7 @@
     <div class="col s12 m6 l4">
       <div class="card medium">
         <div class="card-image">
-          <img src="images/benzecry.jpg">
+          <img src="images/greenhouse_dr.b.jpeg">
           <span class="card-title">Dr. Benzecry</span>
         </div>
         <div class="card-content">
@@ -28,7 +28,7 @@
     <div class="col s12 m6 l4">
       <div class="card medium">
         <div class="card-image">
-          <img src="images/issa.jpg">
+          <img src="images/morgan.jpeg">
           <span class="card-title">Morgan Issa</span>
         </div>
         <div class="card-content">
@@ -39,7 +39,7 @@
     <div class="col s12 m6 l4">
       <div class="card medium">
         <div class="card-image">
-          <img src="images/singh.jpg">
+          <img src="images/shaka.jpeg">
           <span class="card-title">Bishaka Singh</span>
         </div>
         <div class="card-content">
@@ -61,7 +61,7 @@
     <div class="col s12 m6 l4">
       <div class="card medium">
         <div class="card-image">
-          <img src="images/melendez.jpg">
+          <img src="images/melendez.png">
           <span class="card-title">Gerardo Melendez</span>
         </div>
         <div class="card-content">
@@ -72,7 +72,7 @@
     <div class="col s12 m6 l4">
       <div class="card medium">
         <div class="card-image">
-          <img src="images/estrella.jpg">
+          <img src="images/johnny.png">
           <span class="card-title">Johnny Estrella</span>
         </div>
         <div class="card-content">
@@ -83,7 +83,7 @@
     <div class="col s12 m6 l4">
       <div class="card medium">
         <div class="card-image">
-          <img src="images/stokes.jpg">
+          <img src="images/quashon.jpg">
           <span class="card-title">Quashon Stokes</span>
         </div>
         <div class="card-content">
