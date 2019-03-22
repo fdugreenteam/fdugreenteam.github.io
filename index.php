@@ -6,15 +6,15 @@
         <li>
           <img src="images/1.jpg">
           <div class="caption center-align">
-            <h3>Green Team</h3>
-            <h5 class="light grey-text text-lighten-3">Bringing environmental awareness to FDU</h5>
+            <h3 class="outline">Green Team</h3>
+            <h5 class="light grey-text text-lighten-3 outline">Bringing environmental awareness to FDU</h5>
           </div>
         </li>
         <li>
           <img src="images/earthday.jpeg">
           <div class="caption right-align">
-            <h3>Campus Clean-Up Spring 2015</h3>
-            <h5 class="light grey-text text-lighten-3">Celebrating our earth for the 7th year</h5>
+            <h3 class="outline">Campus Clean-Up Spring 2015</h3>
+            <h5 class="light grey-text text-lighten-3 outline">Celebrating our earth for the 7th year</h5>
           </div>
         </li>
       </ul>
