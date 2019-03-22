@@ -69,9 +69,6 @@ export default {
 				'process.browser': false,
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
-			scss({
-				output: 'static/global.css',
-			}),
 			svelte({
 				generate: 'ssr',
 				dev,
