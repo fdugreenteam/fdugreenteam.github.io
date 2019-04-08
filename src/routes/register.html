@@ -74,10 +74,10 @@
           + `&body=`
           + encodeURIComponent(
             `I'm interested in receiving emails about green team events.\r\n`
-            + `Full Name: ${full_name || ''}\r\n`
-            + `Student ID: ${student_id || ''}\r\n`
-            + `Email: ${email || ''}${email_domain || ''}\r\n`
-            + `Graduation: ${graduation_semester || ''} ${graduation_year || ''}\r\n`
+            + `Full Name: ${full_name}\r\n`
+            + `Student ID: ${student_id}\r\n`
+            + `Email: ${email}${email_domain}\r\n`
+            + `Graduation: ${graduation_semester} ${graduation_year}\r\n`
           ),
           '_blank'
         )
@@ -85,11 +85,11 @@
     },
     data: () => ({
       full_name: '',
-      student_id: undefined,
+      student_id: '',
       email: '',
-      email_domain: undefined,
-      graduation_semester: undefined,
-      graduation_year: undefined,
+      email_domain: '@student.fdu.edu',
+      graduation_semester: 'Spring',
+      graduation_year: (new Date()).getFullYear(),
     })
 	};
 </script>
