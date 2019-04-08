@@ -69,11 +69,16 @@
       create_email() {
         const { full_name, student_id, email, email_domain, graduation_semester, graduation_year } = this.get()
         window.open(
-          `mailto:benzecry@fdu.edu?subject=Green Team Registration&body=`
-          + `Full Name: ${full_name || ''}\n`
-          + `Student ID: ${student_id || ''}\n`
-          + `Email: ${email || ''}${email_domain || ''}\n`
-          + `Graduation: ${graduation_semester || ''} ${graduation_year || ''}\n`,
+          `mailto:benzecry@fdu.edu?subject=`
+          + encodeURIComponent(`Green Team Registration`)
+          + `&body=`
+          + encodeURIComponent(
+            `I'm interested in receiving emails about green team events.\r\n`
+            + `Full Name: ${full_name || ''}\r\n`
+            + `Student ID: ${student_id || ''}\r\n`
+            + `Email: ${email || ''}${email_domain || ''}\r\n`
+            + `Graduation: ${graduation_semester || ''} ${graduation_year || ''}\r\n`
+          ),
           '_blank'
         )
       }
